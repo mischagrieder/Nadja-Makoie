@@ -1,16 +1,23 @@
 import { useState } from 'react';
 import ChatWidget from './ChatWidget';
+import { useScrolled } from '../lib/hooks';
 
 export default function FloatingUI() {
   const [chatOpen, setChatOpen] = useState(false);
+  // Hide the booking CTA over the hero (which has its own CTAs); show it once
+  // the visitor scrolls past roughly the first screen.
+  const heroThreshold = typeof window !== 'undefined' ? Math.round(window.innerHeight * 0.6) : 500;
+  const scrolledPastHero = useScrolled(heroThreshold);
+  const showCta = scrolledPastHero && !chatOpen;
 
   return (
     <>
-      {/* Persistent booking CTA – always visible, scrolls with the page */}
+      {/* Booking CTA – appears after scrolling past the hero, scrolls with the page */}
       <a
         href="#kontakt"
+        aria-hidden={!showCta}
         className={`fixed z-30 right-4 sm:right-5 bottom-[5.75rem] flex items-center gap-2 pl-4 pr-5 py-3 rounded-full bg-bronze text-white text-sm font-semibold shadow-lg hover:bg-bronzedark transition-all duration-300 ${
-          chatOpen ? 'opacity-0 translate-y-2 pointer-events-none' : 'opacity-100'
+          showCta ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
         }`}
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
