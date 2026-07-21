@@ -39,14 +39,71 @@ src/
   App.tsx                  Seitenaufbau
   data.ts                  ALLE Inhalte: Praxisdaten, Leistungen, Stats, Bilder, Bewertungen
   lib/hooks.ts             useScrolled / useIsMobile
+  lib/chatKnowledge.ts     Antwort-Engine des Chatbots (Wissensbasis)
   components/
     Navbar.tsx  Hero.tsx  StatsBar.tsx  Services.tsx  About.tsx
     WhyUs.tsx   Reviews.tsx  Contact.tsx  Footer.tsx
     Reveal.tsx  Icon.tsx
+    FloatingUI.tsx           dauerhafter „Termin"-CTA + Chat-Starter (unten rechts)
+    ChatWidget.tsx           Chat-Fenster mit freiem Texteingabefeld
 ```
 
 Fast alle Inhalte liegen zentral in **`src/data.ts`** und lassen sich dort ohne
 React-Kenntnisse anpassen.
+
+## Chatbot & dauerhafter CTA
+
+Unten rechts sind zwei fixe Elemente, die beim Scrollen mitgehen:
+
+- **„Termin vereinbaren"-CTA** – immer sichtbar, springt zum Kontaktbereich.
+- **Chat-Starter** – öffnet ein Chat-Fenster mit **freiem Texteingabefeld**.
+
+Der Chatbot beantwortet Fragen zur Praxis (Öffnungszeiten, Adresse, Termin,
+Kosten, Leistungen) **und** allgemeine Zahn-Fragen, die nicht auf der Website
+stehen (z. B. Zahnschmerzen, Karies, Verfärbungen durch Kaffee, Bleaching,
+Angst, Weisheitszähne …). Die Antwort-Logik liegt in
+`src/lib/chatKnowledge.ts` und lässt sich dort leicht erweitern – funktioniert
+komplett **ohne Backend**.
+
+### Optional: unbegrenzte KI-Antworten (echte Claude-KI)
+
+Für frei formulierte Antworten auf *beliebige* Fragen kann der Chat an eine
+echte KI (Anthropic Claude) angebunden werden. Dazu einen kleinen Serverless-
+Endpunkt bereitstellen und dessen URL als Umgebungsvariable setzen:
+
+```bash
+# .env
+VITE_CHAT_API_URL=/api/chat
+```
+
+Ist die Variable gesetzt, schickt `ChatWidget.tsx` die Unterhaltung an diesen
+Endpunkt; ist sie leer, greift automatisch die eingebaute Wissensbasis.
+
+Beispiel-Endpunkt (Node, z. B. Vercel/Netlify Function) – der API-Schlüssel
+bleibt server­seitig, niemals im Browser:
+
+```ts
+import Anthropic from '@anthropic-ai/sdk';
+const client = new Anthropic(); // liest ANTHROPIC_API_KEY aus der Umgebung
+
+const SYSTEM = `Du bist der freundliche digitale Assistent der Zahnarztpraxis
+Dental Wellness in Olten (Dr. med. dent. Nadja V. Makoie). Antworte kurz,
+herzlich und auf Deutsch. Beantworte Praxis- und allgemeine Zahn-Fragen.
+Gib keine verbindliche medizinische Diagnose – verweise im Zweifel auf einen
+Termin (062 212 50 32).`;
+
+export default async function handler(req, res) {
+  const { messages } = req.body; // [{ role: 'user'|'assistant', content }]
+  const msg = await client.messages.create({
+    model: 'claude-opus-4-8',
+    max_tokens: 512,
+    system: SYSTEM,
+    messages,
+  });
+  const reply = msg.content.find((b) => b.type === 'text')?.text ?? '';
+  res.status(200).json({ reply });
+}
+```
 
 ## ⚠️ Vor dem Go-Live unbedingt anpassen
 
