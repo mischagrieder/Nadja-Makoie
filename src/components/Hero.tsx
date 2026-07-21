@@ -16,19 +16,16 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-5 md:px-8 pb-16 md:pb-24 pt-32">
         <Reveal>
-          <span className="eyebrow text-bronze">Zahnarztpraxis in Olten</span>
-        </Reveal>
-        <Reveal delay={120}>
-          <h1 className="mt-5 font-serif text-cream font-medium leading-[0.98] text-[clamp(2.75rem,7vw,5.5rem)] max-w-4xl">
+          <h1 className="font-serif text-cream font-medium leading-[0.98] text-[clamp(2.75rem,7vw,5.5rem)] max-w-4xl">
             Ihr schönstes Lächeln,
             <br />
             in besten Händen.
           </h1>
         </Reveal>
-        <Reveal delay={240}>
+        <Reveal delay={140}>
           <p className="mt-6 text-cream/85 text-base md:text-lg leading-relaxed max-w-xl font-light">
-            Fundierte, angstfreie Zahnmedizin in freundlicher Atmosphäre – ästhetisch,
-            modern und ganz auf Sie abgestimmt. Willkommen bei Dental Wellness.
+            Präzise Zahnmedizin auf höchstem Niveau – für Ihre Zahngesundheit, Ihr
+            Wohlbefinden und ein strahlendes Lächeln.
           </p>
         </Reveal>
         <Reveal delay={360}>
