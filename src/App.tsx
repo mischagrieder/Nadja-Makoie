@@ -1,26 +1,27 @@
-import { useState } from 'react';
-import SplashScreen from './components/SplashScreen';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import SmileGallerySection from './components/SmileGallerySection';
-import ImplantSection from './components/ImplantSection';
-import ReviewsSection from './components/ReviewsSection';
-import ContactSection from './components/ContactSection';
+import Hero from './components/Hero';
+import StatsBar from './components/StatsBar';
+import Services from './components/Services';
+import About from './components/About';
+import WhyUs from './components/WhyUs';
+import Reviews from './components/Reviews';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
-
   return (
-    <div className="bg-white">
-      {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+    <div className="bg-ivory overflow-x-hidden">
       <Navbar />
       <main>
-        <HeroSection />
-        <SmileGallerySection />
-        <ImplantSection />
-        <ReviewsSection />
-        <ContactSection />
+        <Hero />
+        <StatsBar />
+        <Services />
+        <About />
+        <WhyUs />
+        <Reviews />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }

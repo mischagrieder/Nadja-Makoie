@@ -1,23 +1,21 @@
 import { useEffect, useState } from 'react';
 import { CLINIC } from '../data';
+import { useScrolled } from '../lib/hooks';
 
-const NAV_LINKS = [
-  { label: 'Start', href: '#start' },
+const LINKS = [
   { label: 'Behandlungen', href: '#behandlungen' },
-  { label: 'Implantate', href: '#implantate' },
+  { label: 'Praxis', href: '#praxis' },
   { label: 'Bewertungen', href: '#bewertungen' },
   { label: 'Kontakt', href: '#kontakt' },
 ];
 
 export default function Navbar() {
+  const scrolled = useScrolled(24);
   const [open, setOpen] = useState(false);
+  const light = !scrolled && !open; // light text over the dark hero
 
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = open ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
@@ -25,117 +23,122 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-6 py-2 md:py-3 bg-white/80 backdrop-blur-md">
-        {/* Logo */}
-        <a href="#start" className="flex flex-col" aria-label="Dental Wellness Olten – Startseite">
-          <span className="text-xl md:text-2xl font-extrabold uppercase tracking-tight leading-none text-black">
-            Dental
-          </span>
-          <span className="text-xl md:text-2xl font-extrabold uppercase tracking-tight leading-none text-black -mt-1.5 md:-mt-2">
-            Wellness
-          </span>
-          <span className="text-[8px] md:text-[9px] font-medium leading-none mt-1.5 md:mt-2 uppercase tracking-[0.2em] text-black">
-            zahnarztpraxis olten
-          </span>
-        </a>
-
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          <a
-            href={`tel:${CLINIC.phoneHref}`}
-            className="text-sm font-semibold text-black hover:text-neutral-500 transition-colors"
-          >
-            Zahnärztlicher Notfall
-          </a>
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            className="px-6 py-3 bg-white rounded-full border border-black text-sm font-semibold hover:bg-black hover:text-white transition-colors duration-200"
-          >
-            Menü
-          </button>
-        </nav>
-
-        {/* Mobile hamburger */}
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden w-10 h-10 flex items-center justify-center relative"
-          aria-label={open ? 'Menü schliessen' : 'Menü öffnen'}
-          aria-expanded={open}
-        >
-          <span
-            className={`absolute h-0.5 w-6 bg-black rounded-full transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-              open ? 'rotate-45 translate-y-0' : '-translate-y-2'
-            }`}
-          />
-          <span
-            className={`absolute h-0.5 w-6 bg-black rounded-full transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-              open ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'
-            }`}
-          />
-          <span
-            className={`absolute h-0.5 w-6 bg-black rounded-full transition-all duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-              open ? '-rotate-45 translate-y-0' : 'translate-y-2'
-            }`}
-          />
-        </button>
-      </header>
-
-      {/* Slide-in menu overlay (works on all sizes; opened by hamburger or Menü) */}
-      <div
-        className={`fixed inset-0 z-40 ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}
+      <header
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+          scrolled ? 'bg-cream/95 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.06)] py-3' : 'py-5'
+        }`}
       >
-        {/* Backdrop */}
-        <div
-          onClick={() => setOpen(false)}
-          className={`absolute inset-0 bg-black/20 backdrop-blur-sm transition-opacity duration-500 ${
-            open ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
-        {/* Panel */}
-        <div
-          className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-white shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-            open ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
-          <div className="flex flex-col justify-center h-full px-8 gap-1">
-            {NAV_LINKS.map((link, i) => (
+        <div className="max-w-6xl mx-auto px-5 md:px-8 flex items-center justify-between">
+          {/* Logo */}
+          <a href="#start" className="leading-none">
+            <span
+              className={`block font-serif text-2xl md:text-[1.7rem] font-semibold tracking-tight transition-colors ${
+                light ? 'text-cream' : 'text-forest'
+              }`}
+            >
+              Dental Wellness
+            </span>
+            <span
+              className={`eyebrow block mt-0.5 transition-colors ${
+                light ? 'text-cream/70' : 'text-bronze'
+              }`}
+            >
+              Zahnarztpraxis Olten
+            </span>
+          </a>
+
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {LINKS.map((l) => (
               <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={`text-4xl font-bold text-black hover:text-neutral-500 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-                  open ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+                key={l.href}
+                href={l.href}
+                className={`text-sm font-medium tracking-wide transition-colors hover:opacity-70 ${
+                  light ? 'text-cream' : 'text-ink'
                 }`}
-                style={{ transitionDelay: open ? `${100 + i * 60}ms` : '0ms' }}
               >
-                {link.label}
+                {l.label}
               </a>
             ))}
+            <a
+              href={`tel:${CLINIC.phoneHref}`}
+              className={`text-sm font-semibold transition-colors ${
+                light ? 'text-cream' : 'text-forest'
+              }`}
+            >
+              {CLINIC.phoneDisplay}
+            </a>
+            <a
+              href="#kontakt"
+              className="px-5 py-2.5 rounded-full bg-bronze text-white text-sm font-semibold tracking-wide hover:bg-bronzedark transition-colors"
+            >
+              Termin vereinbaren
+            </a>
+          </nav>
 
-            <div
-              className="mt-8 pt-8 border-t border-neutral-200 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]"
+          {/* Mobile hamburger */}
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px]"
+            aria-label={open ? 'Menü schliessen' : 'Menü öffnen'}
+            aria-expanded={open}
+          >
+            <span
+              className={`h-0.5 w-6 rounded-full transition-all duration-300 ${
+                open ? 'translate-y-[7px] rotate-45 bg-cream' : light ? 'bg-cream' : 'bg-forest'
+              }`}
+            />
+            <span
+              className={`h-0.5 w-6 rounded-full transition-all duration-300 ${
+                open ? 'opacity-0' : light ? 'bg-cream' : 'bg-forest'
+              }`}
+            />
+            <span
+              className={`h-0.5 w-6 rounded-full transition-all duration-300 ${
+                open ? '-translate-y-[7px] -rotate-45 bg-cream' : light ? 'bg-cream' : 'bg-forest'
+              }`}
+            />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile menu overlay */}
+      <div
+        className={`md:hidden fixed inset-0 z-40 bg-forest transition-opacity duration-500 ${
+          open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="flex flex-col justify-center h-full px-8 gap-2">
+          {LINKS.map((l, i) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="font-serif text-4xl font-medium text-cream hover:text-bronze transition-all duration-500"
               style={{
-                transitionDelay: open ? '450ms' : '0ms',
+                transitionDelay: open ? `${120 + i * 70}ms` : '0ms',
                 opacity: open ? 1 : 0,
-                transform: open ? 'translateX(0)' : 'translateX(2rem)',
+                transform: open ? 'translateX(0)' : 'translateX(24px)',
               }}
             >
-              <a
-                href={`tel:${CLINIC.phoneHref}`}
-                className="block text-sm font-semibold text-black mb-4 hover:text-neutral-500 transition-colors"
-              >
-                Zahnärztlicher Notfall · {CLINIC.phoneDisplay}
-              </a>
-              <a
-                href="#kontakt"
-                onClick={() => setOpen(false)}
-                className="block text-center w-full px-6 py-4 bg-black rounded-full text-white text-sm font-semibold hover:bg-neutral-800 transition-colors duration-200"
-              >
-                Termin buchen
-              </a>
-            </div>
+              {l.label}
+            </a>
+          ))}
+          <div className="mt-10 pt-8 border-t border-cream/20">
+            <a
+              href={`tel:${CLINIC.phoneHref}`}
+              className="block text-cream/80 text-sm mb-4"
+            >
+              Zahnärztlicher Notfall · {CLINIC.phoneDisplay}
+            </a>
+            <a
+              href="#kontakt"
+              onClick={() => setOpen(false)}
+              className="block text-center w-full px-6 py-4 rounded-full bg-bronze text-white text-sm font-semibold hover:bg-bronzedark transition-colors"
+            >
+              Termin vereinbaren
+            </a>
           </div>
         </div>
       </div>

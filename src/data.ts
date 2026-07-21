@@ -1,26 +1,19 @@
 // ---------------------------------------------------------------------------
-// Zentrale Inhalte & Konstanten für die Website der Dental Wellness AG, Olten
+// Zentrale Inhalte & Konstanten – Dental Wellness AG, Olten
+// Design-Referenz: klinik-schwarzwald.com (elegant, warm, premium)
 // ---------------------------------------------------------------------------
 
 // -- Bilder ------------------------------------------------------------------
-// Mit Higgsfield (Recraft V4.1) eigens für diese Praxis generiert und über den
-// Higgsfield-Bild-CDN (images.higgs.ai) als WebP ausgeliefert (Resize + CDN).
-// Die unbearbeiteten Originale (PNG, 2K) sind in der README hinterlegt, falls
-// die Bilder später vollständig selbst gehostet werden sollen.
-export const HERO_IMAGE =
-  'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180819_7f944efd-9e12-4b3c-bc42-ad5b7c5131d5.png&w=1600&q=85';
-
-export const SECTION2_IMAGE =
-  'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180847_97161e86-849d-432f-8f38-8de1f52bebe1.png&w=1400&q=85';
-
-export const SECTION3_BG =
-  'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180850_2a3d5a1e-d3df-48d3-973c-974b5b3ae0d3.png&w=1200&q=85';
-
-export const SECTION3_IMG1 =
-  'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180853_3b8a3597-048b-48c3-8366-df050fbdfcd9.png&w=900&q=85';
-
-export const SECTION3_IMG2 =
-  'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180855_ab0b6fd0-4baf-439b-b9a4-a532076895dd.png&w=900&q=85';
+// Mit Higgsfield (Recraft V4.1, 2K) eigens für diese Praxis generiert, warm-
+// elegant abgestimmt und als optimiertes WebP über den Higgsfield-CDN geliefert.
+// Original-PNGs siehe README (falls selbst gehostet werden soll).
+export const IMG = {
+  hero: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_185639_e6a58397-0dc8-472c-8c94-abb90d85045b.png&w=1800&q=85',
+  doctor: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_185641_6c4cfd04-e26c-4647-ad8a-1ba8451899e9.png&w=1000&q=85',
+  room: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_185643_31857b20-24cc-4d35-8199-2b7a8a7f3055.png&w=1400&q=85',
+  smile: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180847_97161e86-849d-432f-8f38-8de1f52bebe1.png&w=1100&q=85',
+  patient: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180850_2a3d5a1e-d3df-48d3-973c-974b5b3ae0d3.png&w=1100&q=85',
+} as const;
 
 // -- Praxis-Stammdaten -------------------------------------------------------
 export const CLINIC = {
@@ -42,8 +35,6 @@ export const CLINIC = {
     { d: 'Samstag', h: 'nach Vereinbarung' },
     { d: 'Sonntag', h: 'geschlossen' },
   ],
-  // Google Maps – öffnet den Praxis-Eintrag (inkl. Bewertungen). Sobald die
-  // Praxis eine feste Place-ID hat, kann hier der exakte Deep-Link stehen.
   mapsUrl:
     'https://www.google.com/maps/search/?api=1&query=Dental%20Wellness%20AG%20Konradstrasse%2034%204600%20Olten',
   reviewsUrl:
@@ -54,22 +45,75 @@ export const CLINIC = {
     'https://www.google.com/maps?q=Konradstrasse%2034%2C%204600%20Olten&output=embed',
 } as const;
 
-// -- Feature-Balken (Hero) ---------------------------------------------------
-export const featureBars = [
-  'Moderne Zahnmedizin',
-  'Behandlung ohne Angst',
-  'Herzliches Team',
+// -- Vertrauens-Kennzahlen ---------------------------------------------------
+// HINWEIS: Platzhalter-Werte, die den Aufbau zeigen. Vor dem Go-Live durch
+// echte, belegbare Zahlen ersetzen (oder qualitative Aussagen belassen).
+export const stats = [
+  { value: '5,0★', label: 'Google-Bewertungen' },
+  { value: '20+', label: 'Jahre Erfahrung' },
+  { value: '10 000+', label: 'Behandlungen' },
+  { value: '100%', label: 'Persönliche Betreuung' },
 ];
 
-// -- Leistungs-Kacheln (Smile-Gallery) --------------------------------------
-export const services: Array<{ name: string; num: string | null; active: boolean }> = [
-  { name: 'Veneers', num: '01', active: true },
-  { name: 'Kronen &\nBrücken', num: '02', active: false },
-  { name: 'Bleaching', num: '03', active: false },
-  { name: 'Implantate', num: null, active: false },
+// -- Behandlungen (Kacheln) --------------------------------------------------
+export const services: Array<{ icon: string; name: string; text: string }> = [
+  {
+    icon: 'sparkle',
+    name: 'Dentalhygiene & Prophylaxe',
+    text: 'Professionelle Zahnreinigung für ein gesundes, langanhaltend strahlendes Lächeln.',
+  },
+  {
+    icon: 'star',
+    name: 'Ästhetik & Bleaching',
+    text: 'Sanfte Zahnaufhellung und ästhetische Korrekturen – für Ihr schönstes Lächeln.',
+  },
+  {
+    icon: 'veneer',
+    name: 'Veneers',
+    text: 'Hauchdünne Keramikschalen für makellose, natürlich wirkende Frontzähne.',
+  },
+  {
+    icon: 'implant',
+    name: 'Implantate',
+    text: 'Fester, dauerhafter Zahnersatz, der sich anfühlt wie die eigenen Zähne.',
+  },
+  {
+    icon: 'crown',
+    name: 'Kronen & Brücken',
+    text: 'Hochwertiger Zahnersatz, der Funktion und Ästhetik perfekt vereint.',
+  },
+  {
+    icon: 'heart',
+    name: 'Angstfreie Behandlung',
+    text: 'Entspannt zum Zahnarzt – mit Lachgas, Laser und viel Einfühlungsvermögen.',
+  },
 ];
 
-// -- Alle Leistungen (Kontakt-/SEO-Abschnitt) --------------------------------
+// -- Warum Dental Wellness ---------------------------------------------------
+export const whyUs = [
+  {
+    icon: 'heart',
+    title: 'Angstfrei & sanft',
+    text: 'Lachgas, schonende Laserbehandlung und viel Zeit – für Ihre Ruhe im Behandlungsstuhl.',
+  },
+  {
+    icon: 'spark',
+    title: 'Modernste Technologie',
+    text: 'Digitale, präzise und schonende Zahnmedizin auf dem neuesten Stand.',
+  },
+  {
+    icon: 'person',
+    title: 'Persönliche Betreuung',
+    text: 'Wir nehmen uns Zeit, hören zu und behandeln Sie individuell und ehrlich.',
+  },
+  {
+    icon: 'pin',
+    title: 'Zentral in Olten',
+    text: 'Gut erreichbar mitten in der Stadt – an der Konradstrasse 34.',
+  },
+];
+
+// -- Alle Leistungen (Footer / SEO) ------------------------------------------
 export const allServices = [
   'Dentalhygiene & Prophylaxe',
   'Bleaching / Zahnaufhellung',
@@ -86,12 +130,10 @@ export const allServices = [
 ];
 
 // -- Google-Bewertungen ------------------------------------------------------
-// HINWEIS: Dies sind PLATZHALTER-Beispiele, die den Aufbau des Bewertungs-
-// bereichs zeigen. Vor dem Live-Gang durch echte Google-Rezensionen ersetzen
-// (oder das offizielle Google-Reviews-Widget einbinden). Die Sterne-Zahl und
-// die Anzahl sind ebenfalls anzupassen.
+// HINWEIS: PLATZHALTER-Beispiele. Vor dem Go-Live durch echte Google-
+// Rezensionen ersetzen (oder Google-Widget einbinden). Rating & Anzahl ebenso.
 export const GOOGLE_RATING = 5.0;
-export const GOOGLE_REVIEW_COUNT = 48; // Platzhalter – an echten Wert anpassen
+export const GOOGLE_REVIEW_COUNT = 48;
 
 export const reviews: Array<{ name: string; initials: string; text: string; date: string }> = [
   {
@@ -109,7 +151,7 @@ export const reviews: Array<{ name: string; initials: string; text: string; date
   {
     name: 'Elena K.',
     initials: 'EK',
-    text: 'Kompetent, herzlich und ehrlich. Meine Dentalhygiene und das Bleaching waren top – ich fühle mich mit meinem Lächeln endlich wieder wohl.',
+    text: 'Kompetent, herzlich und ehrlich. Meine Dentalhygiene und das Bleaching waren top – ich fühle mich mit meinem Lächeln endlich wieder rundum wohl.',
     date: 'vor 1 Monat',
   },
   {
