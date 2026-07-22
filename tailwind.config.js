@@ -4,15 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        ivory: '#F7F3EC',
-        cream: '#FBF9F4',
-        sand: '#EAE0D2',
-        sanddark: '#DCCFBB',
-        forest: '#2E3A31',
-        forestdark: '#212A23',
-        bronze: '#A98B67',
-        bronzedark: '#8C6F4D',
-        ink: '#23221E',
+        // Light, clean medical palette: blue / navy / white / grey
+        ivory: '#F1F6FB', // page background (very light blue-white)
+        cream: '#FFFFFF', // white surfaces + light text on dark sections
+        sand: '#E2ECF5', // light blue-grey (bands, borders, hovers)
+        sanddark: '#CBDAE9',
+        forest: '#17324E', // primary navy (dark sections, headings)
+        forestdark: '#0F2439', // deep navy (footer, overlays)
+        bronze: '#3B7DB8', // blue accent (buttons, eyebrows, icons)
+        bronzedark: '#2C6299',
+        ink: '#263340', // slate text
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Georgia', 'Cambria', 'serif'],
