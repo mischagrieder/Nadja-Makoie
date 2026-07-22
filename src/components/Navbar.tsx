@@ -12,7 +12,8 @@ const LINKS = [
 export default function Navbar() {
   const scrolled = useScrolled(24);
   const [open, setOpen] = useState(false);
-  const light = !scrolled && !open; // light text over the dark hero
+  // The hero image is bright, so the navbar always uses dark (navy) text.
+  const light = false;
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';

@@ -37,8 +37,8 @@ export default function About() {
               className="w-full h-full object-cover"
             />
           </div>
-          {/* Floating claim card */}
-          <div className="absolute -bottom-6 left-6 right-10 md:right-auto md:max-w-[16rem] bg-forest text-cream rounded-2xl p-5 shadow-xl">
+          {/* Floating claim card – white so it pops on the dark portrait */}
+          <div className="absolute -bottom-6 left-6 right-10 md:right-auto md:max-w-[16rem] bg-cream text-forest rounded-2xl p-5 shadow-xl border border-sand">
             <Stars size={15} />
             <p className="mt-2 font-serif text-lg leading-snug">
               „Fundierte, angstfreie Behandlung in freundlicher Atmosphäre.“

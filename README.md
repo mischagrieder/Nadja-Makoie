@@ -120,19 +120,17 @@ export default async function handler(req, res) {
 
 ## Bilder
 
-Mit **Higgsfield (Recraft V4.1, 2K)** eigens für diese Praxis generiert, warm-
-elegant abgestimmt, als optimiertes WebP über den Higgsfield-CDN ausgeliefert
-(siehe `src/data.ts`, Objekt `IMG`). Für vollständiges Selbst-Hosting die
-Original-PNGs herunterladen, als WebP nach `public/images/` legen und die URLs
-in `src/data.ts` umstellen:
+Mit **Higgsfield (Recraft V4.1, 2K)** eigens für diese Praxis generiert, auf
+die kühle Blau-/Weiss-Palette abgestimmt (Hero hell, Ärztin-Portrait dunkel),
+als optimiertes WebP über den Higgsfield-CDN ausgeliefert (siehe `src/data.ts`,
+Objekt `IMG`). Für vollständiges Selbst-Hosting die Original-PNGs herunterladen,
+als WebP nach `public/images/` legen und die URLs in `src/data.ts` umstellen:
 
 | Verwendung             | Original-URL |
 |------------------------|--------------|
-| Hero (warm)            | `https://d8j0ntlcm91z4.cloudfront.net/user_3FuPVC4JIayU3rXUwYAnv5ZoEBp/hf_20260720_185639_e6a58397-0dc8-472c-8c94-abb90d85045b.png` |
-| Dr. Makoie (Portrait)  | `https://d8j0ntlcm91z4.cloudfront.net/user_3FuPVC4JIayU3rXUwYAnv5ZoEBp/hf_20260720_185641_6c4cfd04-e26c-4647-ad8a-1ba8451899e9.png` |
-| Behandlungszimmer      | `https://d8j0ntlcm91z4.cloudfront.net/user_3FuPVC4JIayU3rXUwYAnv5ZoEBp/hf_20260720_185643_31857b20-24cc-4d35-8199-2b7a8a7f3055.png` |
-| Lächeln                | `https://d8j0ntlcm91z4.cloudfront.net/user_3FuPVC4JIayU3rXUwYAnv5ZoEBp/hf_20260720_180847_97161e86-849d-432f-8f38-8de1f52bebe1.png` |
-| Patientin              | `https://d8j0ntlcm91z4.cloudfront.net/user_3FuPVC4JIayU3rXUwYAnv5ZoEBp/hf_20260720_180850_2a3d5a1e-d3df-48d3-973c-974b5b3ae0d3.png` |
+| Hero (hell)            | `https://d8j0ntlcm91z4.cloudfront.net/user_3FuPVC4JIayU3rXUwYAnv5ZoEBp/hf_20260722_064339_42355fa9-3f2c-406b-8615-dbab1a27471b.png` |
+| Dr. Makoie (Portrait, dunkel) | `https://d8j0ntlcm91z4.cloudfront.net/user_3FuPVC4JIayU3rXUwYAnv5ZoEBp/hf_20260722_064342_f2fc97dc-48e8-475d-ac80-9dc4cbfdbc3d.png` |
+| Behandlungszimmer      | `https://d8j0ntlcm91z4.cloudfront.net/user_3FuPVC4JIayU3rXUwYAnv5ZoEBp/hf_20260722_064344_c77aa870-6f16-4d47-83ec-fffeadd26210.png` |
 
 ## SEO
 
