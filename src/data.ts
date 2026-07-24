@@ -130,34 +130,45 @@ export const allServices = [
 ];
 
 // -- Google-Bewertungen ------------------------------------------------------
-// HINWEIS: PLATZHALTER-Beispiele. Vor dem Go-Live durch echte Google-
-// Rezensionen ersetzen (oder Google-Widget einbinden). Rating & Anzahl ebenso.
+// Echte Google-Rezensionen der Praxis (Stand der übermittelten Screenshots).
+// GOOGLE_RATING = angezeigte Sterne-Wertung im Badge.
 export const GOOGLE_RATING = 5.0;
-export const GOOGLE_REVIEW_COUNT = 48;
 
 export const reviews: Array<{ name: string; initials: string; text: string; date: string }> = [
   {
-    name: 'Sandra M.',
-    initials: 'SM',
-    text: 'Ich hatte immer grosse Angst vor dem Zahnarzt – hier wurde ich so einfühlsam betreut, dass ich zum ersten Mal völlig entspannt war. Das Team nimmt sich wirklich Zeit.',
-    date: 'vor 2 Wochen',
+    name: 'Judith B',
+    initials: 'JB',
+    text: 'Sehr erfahrene Zahnärztin in allen Bereichen mit tollem Team. Behandlungen absolut top und schmerzfrei. Umfangreiche Information über Behandlung und Preis. Ich kann Fr. Dr. Makoie nur weiterempfehlen.',
+    date: 'vor 7 Monaten',
   },
   {
-    name: 'Thomas R.',
-    initials: 'TR',
-    text: 'Sehr moderne Praxis mitten in Olten. Frau Dr. Makoie erklärt jeden Schritt genau und behandelt angenehm schmerzfrei. Absolute Weiterempfehlung!',
-    date: 'vor 1 Monat',
+    name: 'Sema Kaya',
+    initials: 'SK',
+    text: 'Ich bin Angstpatientin und wurde sehr gut behandelt. Alle sind sehr freundlich und ich habe mich sehr wohl gefühlt. Ich kann die Praxis jedem weiterempfehlen.',
+    date: 'vor 7 Monaten',
   },
   {
-    name: 'Elena K.',
-    initials: 'EK',
-    text: 'Kompetent, herzlich und ehrlich. Meine Dentalhygiene und das Bleaching waren top – ich fühle mich mit meinem Lächeln endlich wieder rundum wohl.',
-    date: 'vor 1 Monat',
+    name: 'David Aeschlimann',
+    initials: 'DA',
+    text: 'Ich bin seit Jahren sehr zufriedener Patient. 4 Weisheitszähne entfernt, regelmässige Dentalhygiene, Löcher flicken – alles super kompetent und freundlich.',
+    date: 'vor 4 Monaten',
   },
   {
-    name: 'Marco B.',
-    initials: 'MB',
-    text: 'Kurzfristiger Notfalltermin, super freundlich empfangen und schnell geholfen. Man merkt, dass hier der Mensch im Mittelpunkt steht.',
-    date: 'vor 3 Monaten',
+    name: 'Thomas Bertschin',
+    initials: 'TB',
+    text: 'Meine Frau ist absolut begeistert! Sowohl mit der Behandlung als auch mit dem gesamten Team. Sie ist mehr als zufrieden. Herzlichen Dank für die tolle Betreuung!',
+    date: 'vor 4 Monaten',
+  },
+  {
+    name: 'Roger Wyss',
+    initials: 'RW',
+    text: 'War heute zur Zahnreinigung in der Praxis. Hat mich sehr gefreut, dass Frau Stössel wieder da ist. Bin mit der Arbeit von Frau Makoie und ihrem Team stets zufrieden und fühle mich gut aufgehoben. Danke!',
+    date: 'vor 5 Monaten',
+  },
+  {
+    name: 'Tabea Stössel',
+    initials: 'TS',
+    text: 'Ich bin rundum zufrieden mit der Behandlung bei Dr. Makoie. Sie ist sehr kompetent, arbeitet ruhig und vor allem schnell, was einem viel Sicherheit gibt. Besonders die Entfernung meiner Weisheitszähne war wirklich spitze – alles verlief professionell, zügig und nahezu schmerzfrei. Auch das Praxisteam war freundlich und gut organisiert. Ich kann Dr. Makoie sowie die Praxis uneingeschränkt weiterempfehlen.',
+    date: 'vor 7 Monaten',
   },
 ];

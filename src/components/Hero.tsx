@@ -1,5 +1,4 @@
-import { CLINIC, IMG, GOOGLE_RATING } from '../data';
-import { Stars } from './Icon';
+import { CLINIC, IMG } from '../data';
 import Reveal from './Reveal';
 
 export default function Hero() {
@@ -43,15 +42,6 @@ export default function Hero() {
             >
               {CLINIC.phoneDisplay} anrufen
             </a>
-          </div>
-        </Reveal>
-        <Reveal delay={480}>
-          <div className="mt-8 flex items-center gap-3">
-            <Stars size={18} />
-            <span className="text-ink/75 text-sm">
-              {GOOGLE_RATING.toFixed(1).replace('.', ',')} auf Google · Von Patientinnen &amp;
-              Patienten empfohlen
-            </span>
           </div>
         </Reveal>
       </div>

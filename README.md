@@ -110,9 +110,9 @@ export default async function handler(req, res) {
 1. **Kennzahlen** in `src/data.ts` (`stats`) sind **Platzhalter** (z. B. „20+ Jahre",
    „10 000+ Behandlungen"). Durch echte, belegbare Werte ersetzen – oder qualitative
    Aussagen belassen.
-2. **Google-Bewertungen** (`reviews`, `GOOGLE_RATING`, `GOOGLE_REVIEW_COUNT`) sind
-   **Beispiele**, die den Aufbau zeigen. Vor der Veröffentlichung durch echte
-   Google-Rezensionen ersetzen oder das offizielle Google-Widget einbinden.
+2. **Google-Bewertungen** (`reviews` in `src/data.ts`) sind **echte** Rezensionen
+   der Praxis. Bei Bedarf neue hinzufügen/aktualisieren. Das Badge zeigt die
+   Wertung `GOOGLE_RATING` (5,0) – ohne fixe Gesamtzahl.
 3. **Google-Links** (`reviewsUrl`/`writeReviewUrl`/`mapsUrl`) zeigen auf eine
    Google-Maps-Suche. Mit fester **Place-ID** die exakten Deep-Links hinterlegen.
 4. **Impressum & Datenschutz** ergänzen (in der Schweiz erforderlich).

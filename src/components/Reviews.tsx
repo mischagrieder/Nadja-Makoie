@@ -1,4 +1,4 @@
-import { CLINIC, GOOGLE_RATING, GOOGLE_REVIEW_COUNT, reviews } from '../data';
+import { CLINIC, GOOGLE_RATING, reviews } from '../data';
 import { GoogleG, Stars } from './Icon';
 import Reveal from './Reveal';
 
@@ -32,9 +32,7 @@ export default function Reviews() {
                     </span>
                     <Stars />
                   </div>
-                  <span className="text-xs text-ink/60">
-                    {GOOGLE_REVIEW_COUNT} Google-Bewertungen
-                  </span>
+                  <span className="text-xs text-ink/60">Bewertungen auf Google</span>
                 </div>
               </div>
               <div className="mt-4 flex gap-2">
