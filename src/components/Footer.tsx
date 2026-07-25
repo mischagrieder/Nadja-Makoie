@@ -59,6 +59,14 @@ export default function Footer() {
       <div className="border-t border-cream/10">
         <div className="max-w-6xl mx-auto px-5 md:px-8 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-xs text-cream/55">
           <p>© {year} Dental Wellness AG · Olten</p>
+          <nav className="flex items-center gap-4">
+            <a href="/impressum.html" className="text-cream/70 hover:text-cream transition-colors">
+              Impressum
+            </a>
+            <a href="/datenschutz.html" className="text-cream/70 hover:text-cream transition-colors">
+              Datenschutz
+            </a>
+          </nav>
           <p>
             Zahnärztlicher Notfall:{' '}
             <a href={`tel:${CLINIC.phoneHref}`} className="text-cream/80 hover:text-cream">

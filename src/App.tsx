@@ -8,6 +8,7 @@ import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingUI from './components/FloatingUI';
+import CookieBanner from './components/CookieBanner';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       </main>
       <Footer />
       <FloatingUI />
+      <CookieBanner />
     </div>
   );
 }
