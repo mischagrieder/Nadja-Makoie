@@ -52,30 +52,3 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-
-/* --- Schimmernder blauer Zahn am Cursor --------------------------------- */
-.cursor-tooth {
-  --active: 0.5;
-}
-.cursor-tooth-inner {
-  color: #3b7db8;
-  opacity: var(--active);
-  animation: tooth-shimmer 2.6s ease-in-out infinite;
-  transition: opacity 0.5s ease;
-}
-@keyframes tooth-shimmer {
-  0%,
-  100% {
-    transform: translate(-50%, -50%) scale(0.92);
-    filter: drop-shadow(0 0 4px rgba(59, 125, 184, 0.35));
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.05);
-    filter: drop-shadow(0 0 8px rgba(59, 125, 184, 0.6));
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .cursor-tooth {
-    display: none;
-  }
-}

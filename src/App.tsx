@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingUI from './components/FloatingUI';
 import CookieBanner from './components/CookieBanner';
-import CursorTooth from './components/CursorTooth';
 import { useSmoothScroll } from './lib/smoothScroll';
 
 export default function App() {
@@ -29,7 +28,6 @@ export default function App() {
       <Footer />
       <FloatingUI />
       <CookieBanner />
-      <CursorTooth />
     </div>
   );
 }
