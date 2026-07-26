@@ -12,7 +12,7 @@ import CookieBanner from './components/CookieBanner';
 
 export default function App() {
   return (
-    <div className="bg-ivory overflow-x-hidden">
+    <div className="bg-ivory overflow-x-clip">
       <Navbar />
       <main>
         <Hero />

@@ -24,37 +24,64 @@ export default function Services() {
             </p>
           </Reveal>
         </div>
+      </div>
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-          {services.map((svc, i) => (
-            <Reveal
-              key={svc.name}
-              delay={(i % 3) * 90}
-              as="article"
-              className="group bg-cream rounded-2xl p-7 md:p-8 border border-sand hover:border-bronze/50 hover:shadow-[0_18px_50px_-24px_rgba(46,58,49,0.4)] transition-all duration-500"
-            >
-              <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-forest/5 text-forest group-hover:bg-forest group-hover:text-cream transition-colors duration-500">
-                <Icon name={svc.icon} className="w-7 h-7" strokeWidth={1.4} />
+      {/* Stacking cards – each card sticks and the next slides over it */}
+      <div className="max-w-6xl mx-auto px-5 md:px-8 mt-12 md:mt-16">
+        {services.map((svc, i) => (
+          <article
+            key={svc.name}
+            style={{ top: `calc(5rem + ${(i * 2.25).toFixed(2)}rem)` }}
+            className="sticky mb-6 h-[80vh] min-h-[520px] rounded-[1.75rem] overflow-hidden bg-cream border border-sand shadow-[0_30px_90px_-45px_rgba(23,50,78,0.6)] flex flex-col"
+          >
+            {/* Header (stays visible when the card is peeking under the next) */}
+            <div className="shrink-0 px-7 md:px-12 pt-7 md:pt-9 pb-3 md:pb-4 flex items-center gap-4 md:gap-6">
+              <span className="font-serif text-2xl md:text-3xl font-semibold text-bronze tabular-nums">
+                {String(i + 1).padStart(2, '0')}
               </span>
-              <h3 className="mt-6 font-serif text-forest text-2xl md:text-[1.75rem] font-semibold">
+              <h3 className="font-serif text-forest text-[clamp(1.75rem,4vw,3.25rem)] font-semibold leading-none">
                 {svc.name}
               </h3>
-              <p className="mt-3 text-ink/70 text-sm md:text-base font-light leading-relaxed">
-                {svc.text}
-              </p>
-            </Reveal>
-          ))}
-        </div>
+            </div>
 
-        <Reveal delay={150} className="mt-12 text-center">
-          <a
-            href="#kontakt"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest text-cream text-sm font-semibold tracking-wide hover:bg-forestdark transition-colors"
-          >
-            Beratungstermin vereinbaren
-            <Icon name="arrow" className="w-4 h-4" strokeWidth={1.8} />
-          </a>
-        </Reveal>
+            {/* Body */}
+            <div className="flex-1 min-h-0 grid md:grid-cols-2">
+              <div className="order-2 md:order-1 px-7 md:px-12 py-5 md:py-8 flex flex-col justify-center gap-5 md:gap-7">
+                <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-forest/5 text-forest">
+                  <Icon name={svc.icon} className="w-7 h-7" strokeWidth={1.4} />
+                </span>
+                <p className="text-ink/75 text-lg md:text-2xl font-light leading-relaxed max-w-md">
+                  {svc.text}
+                </p>
+                <a
+                  href="#kontakt"
+                  className="inline-flex w-fit items-center gap-2 px-7 py-3.5 rounded-full bg-bronze text-white text-sm font-semibold tracking-wide hover:bg-bronzedark transition-colors"
+                >
+                  Termin vereinbaren
+                  <Icon name="arrow" className="w-4 h-4" strokeWidth={1.8} />
+                </a>
+              </div>
+              <div className="order-1 md:order-2 relative min-h-[170px] md:min-h-0">
+                <img
+                  src={svc.img}
+                  alt={`${svc.name} – Dental Wellness Olten`}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="max-w-6xl mx-auto px-5 md:px-8 mt-14 text-center">
+        <a
+          href="#kontakt"
+          className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-forest text-cream text-sm font-semibold tracking-wide hover:bg-forestdark transition-colors"
+        >
+          Beratungstermin vereinbaren
+          <Icon name="arrow" className="w-4 h-4" strokeWidth={1.8} />
+        </a>
       </div>
     </section>
   );

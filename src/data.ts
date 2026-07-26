@@ -55,37 +55,44 @@ export const stats = [
   { value: '100%', label: 'Persönliche Betreuung' },
 ];
 
-// -- Behandlungen (Kacheln) --------------------------------------------------
-export const services: Array<{ icon: string; name: string; text: string }> = [
+// -- Behandlungen (Stapelkarten) ---------------------------------------------
+// Jede Behandlung mit eigenem, kühl abgestimmtem Higgsfield-Bild.
+export const services: Array<{ icon: string; name: string; text: string; img: string }> = [
   {
     icon: 'sparkle',
     name: 'Dentalhygiene & Prophylaxe',
     text: 'Professionelle Zahnreinigung für ein gesundes, langanhaltend strahlendes Lächeln.',
+    img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260725_190321_8823b4b0-9446-4879-a699-f0bdba5afff2.png&w=900&q=85',
   },
   {
     icon: 'star',
     name: 'Ästhetik & Bleaching',
     text: 'Sanfte Zahnaufhellung und ästhetische Korrekturen – für Ihr schönstes Lächeln.',
+    img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260725_190323_7f8bc5e5-5269-480f-8122-f0fa0044b41b.png&w=900&q=85',
   },
   {
     icon: 'veneer',
     name: 'Veneers',
     text: 'Hauchdünne Keramikschalen für makellose, natürlich wirkende Frontzähne.',
+    img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260725_190325_ed495727-4d5e-4dc8-ab87-1c9a99e6cd46.png&w=900&q=85',
   },
   {
     icon: 'implant',
     name: 'Implantate',
     text: 'Fester, dauerhafter Zahnersatz, der sich anfühlt wie die eigenen Zähne.',
+    img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260725_190333_fc3e9e91-3dab-43e7-9672-ec2a4a0f96de.png&w=900&q=85',
   },
   {
     icon: 'crown',
     name: 'Kronen & Brücken',
     text: 'Hochwertiger Zahnersatz, der Funktion und Ästhetik perfekt vereint.',
+    img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260725_190335_3ca26578-a2cb-4430-9358-728aa3838e88.png&w=900&q=85',
   },
   {
     icon: 'heart',
     name: 'Angstfreie Behandlung',
     text: 'Entspannt zum Zahnarzt – mit Lachgas, Laser und viel Einfühlungsvermögen.',
+    img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260725_190337_b971a0f6-1036-40b6-82c5-86cda84c3c9d.png&w=900&q=85',
   },
 ];
 
