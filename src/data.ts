@@ -9,7 +9,9 @@
 // Original-PNGs siehe README (falls selbst gehostet werden soll).
 export const IMG = {
   hero: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260722_064339_42355fa9-3f2c-406b-8615-dbab1a27471b.png&w=1800&q=85',
-  doctor: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260722_064342_f2fc97dc-48e8-475d-ac80-9dc4cbfdbc3d.png&w=1000&q=85',
+  // Echtes Foto von Dr. Makoie an ihrem Empfang, mit Higgsfield bereinigt
+  // (Google-Maps-Elemente entfernt) und auf 2K hochskaliert.
+  doctor: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260726_164140_74fc4a39-7260-4d37-8860-a2e8e8233399.png&w=1100&q=85',
   room: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260722_064344_c77aa870-6f16-4d47-83ec-fffeadd26210.png&w=1400&q=85',
   smile: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180847_97161e86-849d-432f-8f38-8de1f52bebe1.png&w=1100&q=85',
   patient: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180850_2a3d5a1e-d3df-48d3-973c-974b5b3ae0d3.png&w=1100&q=85',

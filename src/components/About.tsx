@@ -17,23 +17,11 @@ export default function About() {
         {/* Portrait */}
         <Reveal className="relative">
           <div className="rounded-[1.75rem] overflow-hidden aspect-[4/5] bg-sand">
-            {/*
-              Echtes Foto von Dr. Makoie. Datei als public/team/nadja-makoie.jpg ablegen
-              (wird beim Deploy zu /team/nadja-makoie.jpg). Fehlt sie, greift automatisch
-              das vorhandene Bild als Platzhalter.
-            */}
             <img
-              src="/team/nadja-makoie.jpg"
-              onError={(e) => {
-                const el = e.currentTarget;
-                if (!el.dataset.fallback) {
-                  el.dataset.fallback = '1';
-                  el.src = IMG.doctor;
-                }
-              }}
+              src={IMG.doctor}
               alt={`${CLINIC.dentist}, Zahnärztin bei Dental Wellness in Olten`}
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
           {/* Floating claim card - white so it pops on the dark portrait */}
