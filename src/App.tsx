@@ -18,9 +18,9 @@ export default function App() {
         <Hero />
         <StatsBar />
         <Services />
+        <Reviews />
         <About />
         <WhyUs />
-        <Reviews />
         <Contact />
       </main>
       <Footer />
