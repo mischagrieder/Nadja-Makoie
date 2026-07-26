@@ -32,12 +32,12 @@ export default function About() {
           <div className="rounded-[1.75rem] overflow-hidden aspect-[4/5] bg-sand">
             <img
               src={IMG.doctor}
-              alt={`${CLINIC.dentist} – Zahnärztin bei Dental Wellness Olten`}
+              alt={`${CLINIC.dentist}, Zahnärztin bei Dental Wellness Olten`}
               loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>
-          {/* Floating claim card – white so it pops on the dark portrait */}
+          {/* Floating claim card - white so it pops on the dark portrait */}
           <div className="absolute -bottom-6 left-6 right-10 md:right-auto md:max-w-[16rem] bg-cream text-forest rounded-2xl p-5 shadow-xl border border-sand">
             <Stars size={15} />
             <p className="mt-2 font-serif text-lg leading-snug">
@@ -62,7 +62,7 @@ export default function About() {
             <p className="mt-6 text-ink/75 text-base md:text-lg font-light leading-relaxed">
               In der Dental Wellness AG mitten in Olten steht der Mensch im Mittelpunkt. Wir
               verbinden moderne, digitale Zahnmedizin mit viel Zeit, Einfühlungsvermögen und
-              einer ruhigen, herzlichen Atmosphäre – damit Sie sich rundum wohlfühlen.
+              einer ruhigen, herzlichen Atmosphäre, damit Sie sich rundum wohlfühlen.
             </p>
           </Reveal>
           <Reveal delay={300}>

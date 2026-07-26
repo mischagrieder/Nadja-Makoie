@@ -25,7 +25,7 @@ export default function Contact() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-6 text-cream/75 text-base md:text-lg font-light leading-relaxed max-w-md">
-              Vereinbaren Sie ganz unkompliziert einen Termin – telefonisch oder per E-Mail.
+              Vereinbaren Sie ganz unkompliziert einen Termin, telefonisch oder per E-Mail.
               Wir nehmen uns Zeit für Sie.
             </p>
           </Reveal>
@@ -80,7 +80,7 @@ export default function Contact() {
           </Reveal>
         </div>
 
-        {/* Map – Google Maps loads only after consent (Datenschutz) */}
+        {/* Map - Google Maps loads only after consent (Datenschutz) */}
         <Reveal delay={200} className="rounded-[1.75rem] overflow-hidden min-h-[320px] md:min-h-0 bg-forestdark">
           {showMap ? (
             <iframe

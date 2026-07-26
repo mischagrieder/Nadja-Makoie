@@ -181,7 +181,7 @@ export default function ChatWidget({ open, onClose }: { open: boolean; onClose: 
       </form>
 
       <p className="text-[10px] text-ink/40 text-center pb-2 px-4">
-        Automatische Antworten – im Zweifel berät Sie {CLINIC.dentist} gern persönlich.
+        Automatische Antworten. Im Zweifel berät Sie {CLINIC.dentist} gern persönlich.
       </p>
     </div>
   );

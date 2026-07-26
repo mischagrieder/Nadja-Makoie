@@ -12,7 +12,7 @@ export default function FloatingUI() {
 
   return (
     <>
-      {/* Booking CTA – appears after scrolling past the hero, scrolls with the page */}
+      {/* Booking CTA - appears after scrolling past the hero, scrolls with the page */}
       <a
         href="#kontakt"
         aria-hidden={!showCta}

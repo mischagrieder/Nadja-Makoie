@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Bright background */}
       <img
         src={IMG.hero}
-        alt="Dental Wellness – helle, moderne Zahnarztpraxis in Olten"
+        alt="Dental Wellness, helle und moderne Zahnarztpraxis in Olten"
         className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Light wash toward the lower-left keeps the dark blue text legible */}
@@ -24,7 +24,7 @@ export default function Hero() {
         </Reveal>
         <Reveal delay={140}>
           <p className="mt-6 text-ink/80 text-base md:text-lg leading-relaxed max-w-xl font-light">
-            Präzise Zahnmedizin auf höchstem Niveau – für Ihre Zahngesundheit, Ihr
+            Präzise Zahnmedizin auf höchstem Niveau für Ihre Zahngesundheit, Ihr
             Wohlbefinden und ein strahlendes Lächeln.
           </p>
         </Reveal>

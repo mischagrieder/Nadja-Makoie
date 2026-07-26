@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="md:col-span-2 max-w-sm">
           <span className="font-serif text-2xl font-semibold text-cream">Dental Wellness</span>
           <p className="mt-3 text-sm leading-relaxed">
-            {CLINIC.claim}. Ihre Zahnarztpraxis mitten in Olten – {CLINIC.dentist}.
+            {CLINIC.claim}. Ihre Zahnarztpraxis mitten in Olten, {CLINIC.dentist}.
           </p>
           <p className="mt-5 text-sm">
             {CLINIC.street} · {CLINIC.zip} {CLINIC.city}

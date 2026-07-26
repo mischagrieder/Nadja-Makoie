@@ -18,7 +18,7 @@ export default function CookieBanner() {
     >
       <div className="max-w-6xl mx-auto px-5 md:px-8 py-5 flex flex-col md:flex-row md:items-center gap-4">
         <p className="text-sm text-ink/80 leading-relaxed flex-1">
-          Wir verwenden technisch notwendige Speicherung sowie – nur mit Ihrer Einwilligung –
+          Wir verwenden technisch notwendige Speicherung sowie, nur mit Ihrer Einwilligung,
           externe Dienste (z. B. Google Maps, Google Fonts), um diese Website bereitzustellen.
           Mehr dazu in der{' '}
           <a href="/datenschutz.html" className="text-bronze font-semibold hover:underline">

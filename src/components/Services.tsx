@@ -19,14 +19,14 @@ export default function Services() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-5 text-ink/70 text-base md:text-lg font-light leading-relaxed">
-              Von der sanften Vorsorge bis zur ästhetischen Zahnmedizin – bei Dental Wellness
+              Von der sanften Vorsorge bis zur ästhetischen Zahnmedizin. Bei Dental Wellness
               erhalten Sie das gesamte Spektrum moderner Zahnheilkunde aus einer Hand.
             </p>
           </Reveal>
         </div>
       </div>
 
-      {/* Stacking cards – each card sticks and the next slides over it */}
+      {/* Stacking cards - each card sticks and the next slides over it */}
       <div className="max-w-6xl mx-auto px-5 md:px-8 mt-12 md:mt-16">
         {services.map((svc, i) => (
           <article
@@ -64,7 +64,7 @@ export default function Services() {
               <div className="order-1 md:order-2 relative min-h-[170px] md:min-h-0">
                 <img
                   src={svc.img}
-                  alt={`${svc.name} – Dental Wellness Olten`}
+                  alt={`${svc.name}, Dental Wellness Olten`}
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover"
                 />

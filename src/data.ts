@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// Zentrale Inhalte & Konstanten – Dental Wellness AG, Olten
+// Zentrale Inhalte & Konstanten für die Dental Wellness AG, Olten
 // Design-Referenz: klinik-schwarzwald.com (elegant, warm, premium)
 // ---------------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ export const CLINIC = {
   email: 'info@dentalwellness.ch',
   website: 'https://www.dentalwellness.ch',
   hours: [
-    { d: 'Montag – Freitag', h: '08:00 – 17:00 Uhr' },
+    { d: 'Montag bis Freitag', h: '08:00 bis 17:00 Uhr' },
     { d: 'Samstag', h: 'nach Vereinbarung' },
     { d: 'Sonntag', h: 'geschlossen' },
   ],
@@ -67,7 +67,7 @@ export const services: Array<{ icon: string; name: string; text: string; img: st
   {
     icon: 'star',
     name: 'Ästhetik & Bleaching',
-    text: 'Sanfte Zahnaufhellung und ästhetische Korrekturen – für Ihr schönstes Lächeln.',
+    text: 'Sanfte Zahnaufhellung und ästhetische Korrekturen für Ihr schönstes Lächeln.',
     img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260725_190323_7f8bc5e5-5269-480f-8122-f0fa0044b41b.png&w=900&q=85',
   },
   {
@@ -91,7 +91,7 @@ export const services: Array<{ icon: string; name: string; text: string; img: st
   {
     icon: 'heart',
     name: 'Angstfreie Behandlung',
-    text: 'Entspannt zum Zahnarzt – mit Lachgas, Laser und viel Einfühlungsvermögen.',
+    text: 'Entspannt zum Zahnarzt, mit Lachgas, Laser und viel Einfühlungsvermögen.',
     img: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260725_190337_b971a0f6-1036-40b6-82c5-86cda84c3c9d.png&w=900&q=85',
   },
 ];
@@ -101,7 +101,7 @@ export const whyUs = [
   {
     icon: 'heart',
     title: 'Angstfrei & sanft',
-    text: 'Lachgas, schonende Laserbehandlung und viel Zeit – für Ihre Ruhe im Behandlungsstuhl.',
+    text: 'Lachgas, schonende Laserbehandlung und viel Zeit für Ihre Ruhe im Behandlungsstuhl.',
   },
   {
     icon: 'spark',
@@ -116,7 +116,7 @@ export const whyUs = [
   {
     icon: 'pin',
     title: 'Zentral in Olten',
-    text: 'Gut erreichbar mitten in der Stadt – an der Konradstrasse 34.',
+    text: 'Gut erreichbar mitten in der Stadt, an der Konradstrasse 34.',
   },
 ];
 
@@ -157,7 +157,7 @@ export const reviews: Array<{ name: string; initials: string; text: string; date
   {
     name: 'David Aeschlimann',
     initials: 'DA',
-    text: 'Ich bin seit Jahren sehr zufriedener Patient. 4 Weisheitszähne entfernt, regelmässige Dentalhygiene, Löcher flicken – alles super kompetent und freundlich.',
+    text: 'Ich bin seit Jahren sehr zufriedener Patient. 4 Weisheitszähne entfernt, regelmässige Dentalhygiene, Löcher flicken, alles super kompetent und freundlich.',
     date: 'vor 4 Monaten',
   },
   {
@@ -175,7 +175,7 @@ export const reviews: Array<{ name: string; initials: string; text: string; date
   {
     name: 'Tabea Stössel',
     initials: 'TS',
-    text: 'Ich bin rundum zufrieden mit der Behandlung bei Dr. Makoie. Sie ist sehr kompetent, arbeitet ruhig und vor allem schnell, was einem viel Sicherheit gibt. Besonders die Entfernung meiner Weisheitszähne war wirklich spitze – alles verlief professionell, zügig und nahezu schmerzfrei. Auch das Praxisteam war freundlich und gut organisiert. Ich kann Dr. Makoie sowie die Praxis uneingeschränkt weiterempfehlen.',
+    text: 'Ich bin rundum zufrieden mit der Behandlung bei Dr. Makoie. Sie ist sehr kompetent, arbeitet ruhig und vor allem schnell, was einem viel Sicherheit gibt. Besonders die Entfernung meiner Weisheitszähne war wirklich spitze, alles verlief professionell, zügig und nahezu schmerzfrei. Auch das Praxisteam war freundlich und gut organisiert. Ich kann Dr. Makoie sowie die Praxis uneingeschränkt weiterempfehlen.',
     date: 'vor 7 Monaten',
   },
 ];
