@@ -1,13 +1,8 @@
-import { useState } from 'react';
-import { CLINIC } from '../data';
+import { CLINIC, IMG } from '../data';
 import { Icon } from './Icon';
 import Reveal from './Reveal';
-import { setConsent, useConsent } from '../lib/consent';
 
 export default function Contact() {
-  const consent = useConsent();
-  const [loadMap, setLoadMap] = useState(false);
-  const showMap = consent === 'all' || loadMap;
   return (
     <section id="kontakt" className="bg-forest text-cream py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-10 md:gap-16">
@@ -80,46 +75,29 @@ export default function Contact() {
           </Reveal>
         </div>
 
-        {/* Map - Google Maps loads only after consent (Datenschutz) */}
-        <Reveal delay={200} className="rounded-[1.75rem] overflow-hidden min-h-[320px] md:min-h-0 bg-forestdark">
-          {showMap ? (
-            <iframe
-              title={`Standort ${CLINIC.legalName}, ${CLINIC.street}, ${CLINIC.zip} ${CLINIC.city}`}
-              src={CLINIC.mapsEmbed}
-              className="w-full h-full min-h-[320px] border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-          ) : (
-            <div className="w-full h-full min-h-[320px] flex flex-col items-center justify-center text-center gap-4 p-6 text-cream">
-              <Icon name="pin" className="w-8 h-8 text-bronze" />
-              <p className="text-cream/80 text-sm max-w-xs">
-                Zum Anzeigen der Karte wird Google&nbsp;Maps geladen. Dabei können Daten an
-                Google übermittelt werden.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setLoadMap(true);
-                    setConsent('all');
-                  }}
-                  className="px-6 py-3 rounded-full bg-bronze text-white text-sm font-semibold hover:bg-bronzedark transition-colors"
-                >
-                  Karte laden
-                </button>
-                <a
-                  href={CLINIC.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 rounded-full border border-cream/40 text-cream text-sm font-semibold hover:bg-cream hover:text-forest transition-colors"
-                >
-                  Auf Google Maps öffnen
-                </a>
-              </div>
-            </div>
-          )}
+        {/* Aussenansicht der Praxis (ersetzt die Google-Maps-Karte) */}
+        <Reveal delay={200} className="relative rounded-[1.75rem] overflow-hidden min-h-[320px] md:min-h-0 bg-forestdark">
+          <img
+            src={IMG.exterior}
+            alt={`Aussenansicht der Zahnarztpraxis ${CLINIC.legalName} in ${CLINIC.city}`}
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-forestdark/70 via-transparent to-transparent" />
+          <div className="absolute inset-x-4 bottom-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <span className="text-cream text-sm font-medium drop-shadow">
+              {CLINIC.street}, {CLINIC.zip} {CLINIC.city}
+            </span>
+            <a
+              href={CLINIC.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-cream/95 text-forest text-xs font-semibold hover:bg-cream transition-colors w-fit"
+            >
+              <Icon name="pin" className="w-4 h-4 text-bronze" />
+              Route auf Google Maps
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>

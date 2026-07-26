@@ -4,7 +4,7 @@ import Reveal from './Reveal';
 
 export default function WhyUs() {
   return (
-    <section id="warum" className="relative overflow-hidden py-20 md:py-28">
+    <section id="warum" className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-28">
       <img
         src={IMG.room}
         alt="Ruhiges, modernes Behandlungszimmer bei Dental Wellness Olten"
@@ -12,6 +12,8 @@ export default function WhyUs() {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-forestdark/90" />
+      {/* Sanfter Verlauf oben: die helle Sektion darüber geht weich ins dunkle Blau über */}
+      <div className="absolute inset-x-0 top-0 h-24 md:h-40 bg-gradient-to-b from-ivory to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-8">
         <div className="max-w-2xl">

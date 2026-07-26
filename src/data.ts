@@ -15,6 +15,9 @@ export const IMG = {
   room: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260722_064344_c77aa870-6f16-4d47-83ec-fffeadd26210.png&w=1400&q=85',
   smile: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180847_97161e86-849d-432f-8f38-8de1f52bebe1.png&w=1100&q=85',
   patient: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260720_180850_2a3d5a1e-d3df-48d3-973c-974b5b3ae0d3.png&w=1100&q=85',
+  // Aussenansicht der Praxis (Higgsfield, dekorativer Eindruck). Fuer die echte
+  // Fassade bitte ein reales Foto einsetzen.
+  exterior: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_3FuPVC4JIayU3rXUwYAnv5ZoEBp%2Fhf_20260726_165921_4459a78a-228e-47c2-b4bd-046ea04f1f79.png&w=1100&q=85',
 } as const;
 
 // -- Praxis-Stammdaten -------------------------------------------------------
