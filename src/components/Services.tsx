@@ -50,7 +50,7 @@ export default function Services() {
                 <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-forest/5 text-forest">
                   <Icon name={svc.icon} className="w-7 h-7" strokeWidth={1.4} />
                 </span>
-                <p className="text-ink/75 text-lg md:text-2xl font-light leading-relaxed max-w-md">
+                <p className="text-ink/75 text-base md:text-xl font-light leading-relaxed max-w-md">
                   {svc.text}
                 </p>
                 <a
