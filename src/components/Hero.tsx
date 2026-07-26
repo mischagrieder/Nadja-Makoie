@@ -1,17 +1,12 @@
-import { CLINIC, IMG } from '../data';
+import { CLINIC } from '../data';
 import Reveal from './Reveal';
 
 export default function Hero() {
   return (
     <section id="start" className="relative min-h-[100svh] w-full overflow-hidden flex items-end">
-      {/* Bright background */}
-      <img
-        src={IMG.hero}
-        alt="Dental Wellness, helle und moderne Zahnarztpraxis in Olten"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      {/* Light wash toward the lower-left keeps the dark blue text legible */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-ivory/90 via-ivory/45 to-transparent" />
+      {/* Das Startbild liegt im festen Hintergrund (Backdrop). Hier nur ein sanfter
+          Verlauf, damit der dunkelblaue Text unten gut lesbar bleibt. */}
+      <div className="absolute inset-0 bg-gradient-to-t from-ivory/90 via-ivory/35 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-5 md:px-8 pb-16 md:pb-24 pt-32">

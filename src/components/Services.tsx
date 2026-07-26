@@ -4,7 +4,7 @@ import Reveal from './Reveal';
 
 export default function Services() {
   return (
-    <section id="behandlungen" className="bg-ivory py-20 md:py-28">
+    <section id="behandlungen" className="bg-transparent py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-5 md:px-8">
         <div className="max-w-2xl">
           <Reveal>

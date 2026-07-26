@@ -193,3 +193,31 @@ export const reviews: Array<{ name: string; initials: string; text: string; date
     date: 'vor 7 Monaten',
   },
 ];
+
+// -- Häufige Fragen (FAQ) ----------------------------------------------------
+export const faqs: Array<{ q: string; a: string }> = [
+  {
+    q: 'Nehmen Sie neue Patientinnen und Patienten auf?',
+    a: 'Ja, sehr gerne. Rufen Sie uns einfach an oder schreiben Sie uns eine E-Mail, dann finden wir zeitnah einen passenden Termin für Ihr erstes Kennenlernen.',
+  },
+  {
+    q: 'Ich habe grosse Angst vor dem Zahnarzt. Was tun Sie dagegen?',
+    a: 'Sehr viele unserer Patienten kommen mit Angst zu uns. Wir nehmen uns Zeit, erklären jeden Schritt und bieten bei Bedarf Lachgas und eine schonende Laserbehandlung an, damit Sie ruhig und schmerzfrei durch den Termin kommen.',
+  },
+  {
+    q: 'Wie schnell bekomme ich bei Schmerzen einen Termin?',
+    a: 'Bei akuten Schmerzen versuchen wir, Sie noch am selben Tag unterzubringen. Rufen Sie uns dafür möglichst früh am Morgen an unter 062 212 50 32.',
+  },
+  {
+    q: 'Was kostet eine professionelle Dentalhygiene?',
+    a: 'Die Kosten hängen vom Aufwand ab. Vor der Behandlung besprechen wir transparent, was auf Sie zukommt, damit es keine Überraschungen auf der Rechnung gibt.',
+  },
+  {
+    q: 'Werden die Behandlungen von der Krankenkasse übernommen?',
+    a: 'Zahnbehandlungen sind in der Schweiz meist Privatleistungen. Bei Unfällen oder bestimmten Erkrankungen ist eine Kostenbeteiligung möglich. Wir beraten Sie gerne, welche Belege Sie einreichen können.',
+  },
+  {
+    q: 'Bieten Sie auch Zahnaufhellung und Veneers an?',
+    a: 'Ja. Von sanftem Bleaching bis zu hauchdünnen Keramikschalen begleiten wir Sie zu einem natürlich schönen Lächeln, abgestimmt auf Ihr Gesicht und Ihre Wünsche.',
+  },
+];

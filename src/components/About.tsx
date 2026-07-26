@@ -12,7 +12,7 @@ const WERDEGANG = [
 
 export default function About() {
   return (
-    <section id="praxis" className="bg-cream py-20 md:py-28">
+    <section id="praxis" className="bg-transparent py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Portrait */}
         <Reveal className="relative">
@@ -30,7 +30,7 @@ export default function About() {
             <p className="mt-2 font-serif text-lg leading-snug">
               „Ich behandle jeden Menschen so, wie ich selbst behandelt werden möchte.“
             </p>
-            <p className="mt-2 text-xs text-ink/55">Dr. med. dent. Nadja V. Makoie</p>
+            <p className="mt-2 text-xs text-ink/70">Dr. med. dent. Nadja V. Makoie</p>
           </div>
         </Reveal>
 
@@ -47,7 +47,7 @@ export default function About() {
             </h2>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mt-6 text-ink/75 text-base md:text-lg font-light leading-relaxed">
+            <p className="mt-6 text-ink text-base md:text-lg leading-relaxed">
               Gute Zahnmedizin ist für Nadja Makoie vor allem Vertrauenssache. Sie nimmt
               sich Zeit, hört zu und erklärt jeden Schritt in Ruhe, damit aus Unsicherheit
               ein gutes Gefühl wird. Diese Haltung hat sie sich über viele Jahre und mehrere
@@ -64,7 +64,7 @@ export default function About() {
                   <span className="block font-serif text-forest text-xl leading-tight">
                     {w.place}
                   </span>
-                  <span className="block text-ink/70 text-sm md:text-base font-light">
+                  <span className="block text-ink/85 text-sm md:text-base">
                     {w.text}
                   </span>
                 </li>
@@ -73,7 +73,7 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={400}>
-            <p className="mt-8 text-ink/75 text-base md:text-lg font-light leading-relaxed">
+            <p className="mt-8 text-ink text-base md:text-lg leading-relaxed">
               Heute führt sie die Dental Wellness AG mitten in Olten, mit einem eingespielten
               Team, moderner Technik und der Zeit, die es für eine wirklich persönliche
               Betreuung braucht.

@@ -38,7 +38,7 @@ export default function Reviews() {
   const shift = width * (isMobile ? 0.62 : 0.4);
 
   return (
-    <section id="bewertungen" className="bg-ivory py-20 md:py-28 overflow-hidden">
+    <section id="bewertungen" className="bg-transparent py-20 md:py-28 overflow-hidden">
       <div className="max-w-6xl mx-auto px-5 md:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
