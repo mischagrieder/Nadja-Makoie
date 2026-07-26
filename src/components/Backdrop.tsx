@@ -18,9 +18,9 @@ export default function Backdrop() {
       frame = 0;
       const vh = window.innerHeight || 800;
       const y = window.scrollY;
-      // Voll sichtbar oben, verblasst bis ~85% der ersten Bildschirmhöhe auf einen
-      // ganz zarten Rest von 0.08.
-      const op = Math.max(0.08, 1 - y / (vh * 0.85));
+      // Oben gut sichtbar, verblasst beim Scrollen auf einen dezenten Rest, der
+      // aber durchgehend leicht sichtbar bleibt (nicht ganz verschwindet).
+      const op = Math.max(0.18, 1 - y / (vh * 0.8));
       img.style.opacity = op.toFixed(3);
     };
     const onScroll = () => {
@@ -43,10 +43,12 @@ export default function Backdrop() {
         ref={imgRef}
         src={IMG.hero}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover will-change-[opacity]"
+        style={{ filter: 'saturate(0.82) contrast(0.86)', willChange: 'opacity' }}
+        className="absolute inset-0 w-full h-full object-cover"
       />
-      {/* zarter heller Schleier, damit dunkler Text jederzeit gut lesbar bleibt */}
-      <div className="absolute inset-0 bg-ivory/25" />
+      {/* heller Schleier: senkt den Kontrast des Startbilds, damit der Inhalt klar
+          im Vordergrund steht, das Bild aber dezent durchscheint */}
+      <div className="absolute inset-0 bg-ivory/20" />
     </div>
   );
 }

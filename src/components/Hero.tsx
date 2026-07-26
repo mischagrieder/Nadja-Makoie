@@ -4,9 +4,10 @@ import Reveal from './Reveal';
 export default function Hero() {
   return (
     <section id="start" className="relative min-h-[100svh] w-full overflow-hidden flex items-end">
-      {/* Das Startbild liegt im festen Hintergrund (Backdrop). Hier nur ein sanfter
-          Verlauf, damit der dunkelblaue Text unten gut lesbar bleibt. */}
-      <div className="absolute inset-0 bg-gradient-to-t from-ivory/90 via-ivory/35 to-transparent" />
+      {/* Das Startbild liegt im festen Hintergrund (Backdrop). Nur ein weicher,
+          randloser Verlauf unten, damit der dunkelblaue Text lesbar bleibt, ohne
+          dass ein Kasten entsteht. */}
+      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ivory/70 via-ivory/15 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-5 md:px-8 pb-16 md:pb-24 pt-32">
