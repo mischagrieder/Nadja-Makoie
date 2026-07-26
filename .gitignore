@@ -24,3 +24,6 @@ dist-ssr
 
 # Build artifacts / deploy packages
 *.zip
+
+# Temporary local verification scripts
+_*.mjs
