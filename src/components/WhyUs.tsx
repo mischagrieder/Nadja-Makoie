@@ -12,15 +12,21 @@ export default function WhyUs() {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-forestdark/90" />
-      {/* Symmetrischer Chevron-Verlauf mit weichen Kanten: die helle Sektion läuft
-          mittig spitz nach unten, die Ränder sind verschwommen, damit keine harte
-          Linie entsteht, sondern ein sanfter Verlauf von Hell nach Dunkel. */}
+      {/* Durchgehend weicher Verlauf über die volle Breite: verhindert an den
+          Seiten jede harte Kante zwischen heller und dunkler Sektion. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-32 md:h-44 bg-gradient-to-b from-ivory via-ivory/55 to-transparent"
+        style={{ filter: 'blur(12px)' }}
+      />
+      {/* Zusätzliche mittige Vertiefung (Chevron), stark verwischt, damit ein
+          flüssiger Verlauf statt einer Linie entsteht. */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-56 md:h-80"
-        style={{ filter: 'blur(22px)' }}
+        style={{ filter: 'blur(30px)' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/75 to-transparent [clip-path:polygon(-5%_-20%,105%_-20%,50%_104%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/55 to-transparent [clip-path:polygon(-10%_-25%,110%_-25%,50%_100%)]" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-8">
