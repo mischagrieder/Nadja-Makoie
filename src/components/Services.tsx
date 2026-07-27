@@ -31,8 +31,8 @@ export default function Services() {
         {services.map((svc, i) => (
           <article
             key={svc.name}
-            style={{ top: `calc(5rem + ${(i * 2.25).toFixed(2)}rem)` }}
-            className="sticky mb-6 h-[80vh] min-h-[520px] rounded-[1.75rem] overflow-hidden bg-cream border border-sand shadow-[0_30px_90px_-45px_rgba(23,50,78,0.6)] flex flex-col"
+            style={{ top: `calc(5rem + ${(i * 1.4).toFixed(2)}rem)` }}
+            className="sticky mb-6 h-[calc(100svh-17rem)] min-h-[440px] max-h-[600px] rounded-[1.75rem] overflow-hidden bg-cream border border-sand shadow-[0_30px_90px_-45px_rgba(23,50,78,0.6)] flex flex-col"
           >
             {/* Header (stays visible when the card is peeking under the next) */}
             <div className="shrink-0 px-7 md:px-12 pt-7 md:pt-9 pb-3 md:pb-4 flex items-center gap-4 md:gap-6">
