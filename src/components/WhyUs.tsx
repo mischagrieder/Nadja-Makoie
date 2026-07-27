@@ -4,29 +4,26 @@ import Reveal from './Reveal';
 
 export default function WhyUs() {
   return (
-    <section id="warum" className="relative overflow-hidden pt-44 pb-20 md:pt-60 md:pb-28">
-      <img
-        src={IMG.room}
-        alt="Ruhiges, modernes Behandlungszimmer bei Dental Wellness Olten"
-        loading="lazy"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-forestdark/90" />
-      {/* Durchgehend weicher Verlauf über die volle Breite: verhindert an den
-          Seiten jede harte Kante zwischen heller und dunkler Sektion. */}
+    <section id="warum" className="relative pt-52 pb-20 md:pt-64 md:pb-28">
+      {/* Dunkler Hintergrund (Bild + Blau), der von oben unsichtbar aus dem hellen
+          Bereich einblendet. Da die Sektion darüber transparent ist und dasselbe
+          feste Startbild zeigt, entsteht kein sichtbarer Sektionsrand, sondern ein
+          völlig flüssiger Verlauf. Das Dunkle ist vor der Überschrift voll da. */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-32 md:h-44 bg-gradient-to-b from-ivory via-ivory/55 to-transparent"
-        style={{ filter: 'blur(12px)' }}
-      />
-      {/* Zusätzliche mittige Vertiefung (Chevron), stark verwischt, damit ein
-          flüssiger Verlauf statt einer Linie entsteht. */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-56 md:h-80"
-        style={{ filter: 'blur(30px)' }}
+        className="absolute inset-0"
+        style={{
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0, black 165px)',
+          maskImage: 'linear-gradient(to bottom, transparent 0, black 165px)',
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/55 to-transparent [clip-path:polygon(-10%_-25%,110%_-25%,50%_100%)]" />
+        <img
+          src={IMG.room}
+          alt="Ruhiges, modernes Behandlungszimmer bei Dental Wellness Olten"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-forestdark/90" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-8">
