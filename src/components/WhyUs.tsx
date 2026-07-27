@@ -4,17 +4,16 @@ import Reveal from './Reveal';
 
 export default function WhyUs() {
   return (
-    <section id="warum" className="relative pt-52 pb-20 md:pt-64 md:pb-28">
-      {/* Dunkler Hintergrund (Bild + Blau), der von oben unsichtbar aus dem hellen
-          Bereich einblendet. Da die Sektion darüber transparent ist und dasselbe
-          feste Startbild zeigt, entsteht kein sichtbarer Sektionsrand, sondern ein
-          völlig flüssiger Verlauf. Das Dunkle ist vor der Überschrift voll da. */}
+    <section id="warum" className="relative pt-56 pb-20 md:pt-64 md:pb-28">
+      {/* Dunkler Hintergrund (Bild + Blau), der als gerader, sauberer Verlauf von
+          oben aus dem hellen Bereich einblendet. Kein sichtbarer Sektionsrand,
+          nur ein weicher Übergang über die volle Breite. */}
       <div
         aria-hidden="true"
         className="absolute inset-0"
         style={{
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0, black 165px)',
-          maskImage: 'linear-gradient(to bottom, transparent 0, black 165px)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0, rgba(0,0,0,0.55) 110px, #000 210px)',
+          maskImage: 'linear-gradient(to bottom, transparent 0, rgba(0,0,0,0.55) 110px, #000 210px)',
         }}
       >
         <img
